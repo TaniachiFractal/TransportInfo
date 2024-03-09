@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TransportInfo</string>
+    <string name="item_selected_title">Выбран транспорт</string>
+    <string name="item_selected_message">Инфо: %1$s</string>
+</resources>
