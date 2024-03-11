@@ -19,7 +19,26 @@ class SimpleAdapterActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         fld = ActivitySimpleListViewBinding.inflate(layoutInflater)
         setContentView(fld.root)
-        setupListViewSimple()
+     //   setupListViewSimple()
+        setupListViewWithSimpleGeneratedData()
+    }
+    /**Generate elements*/
+    private fun setupListViewWithSimpleGeneratedData()
+    {
+        val data = (1..100).map{
+            mapOf(
+                KEY_TITLE to "Транспорт №$it",
+                KEY_DESCRIPTION to "Описание №$it"
+            )
+        }
+        val adapter = SimpleAdapter(
+            this,
+            data,
+            R.layout.item_custom,
+            arrayOf(KEY_TITLE, KEY_DESCRIPTION),
+            intArrayOf(R.id.titleTextView,R.id.descriptionTextView)
+        )
+        fld.listView.adapter = adapter
     }
     /**Setup data to show*/
     private fun setupListViewSimple() {
