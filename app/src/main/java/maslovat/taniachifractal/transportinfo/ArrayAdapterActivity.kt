@@ -4,10 +4,12 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Parcelable
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import maslovat.taniachifractal.transportinfo.databinding.ActivityListViewBinding
 import maslovat.taniachifractal.transportinfo.databinding.DialogAddTransportBinding
+import java.util.ArrayList
 import java.util.Random
 import java.util.UUID
 
